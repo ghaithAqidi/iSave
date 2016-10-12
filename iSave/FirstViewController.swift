@@ -19,13 +19,19 @@ class FirstViewController: UIViewController {
         let childRef = FIRDatabase.database().reference(withPath: "grocery-items")
         let itemsRef = rootRef.child("grocery-items")
         let milkRef = itemsRef.child("milk")
+        let expensesRef = rootRef.child("expenses")
         print(rootRef.key)   // prints: ""
         print(childRef.key)  // prints: "grocery-items"
         print(itemsRef.key)  // prints: "grocery-items"
         print(milkRef.key)   // prints: "milk"
         
         //saving data to firebase database:
-        
+        //get the text field value.
+        let moneySpentValue = spentMoney.text
+        //add a new child node to firebase database (must be unwrapped by !):
+        let currentExpensesNode = expensesRef.child(moneySpentValue!)
+        //add the value to the node:
+        currentExpensesNode.setValue(moneySpentValue)
         
     }
 
