@@ -48,6 +48,9 @@
                                     <color key="titleColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                     <color key="titleShadowColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToExpenses:" destination="9pv-A4-QxB" eventType="touchUpInside" id="1S3-AK-SW0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of expense:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-Ku-tlq">
                                 <constraints>
@@ -80,6 +83,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="spentMoney" destination="PLL-hr-OZ4" id="qjF-KY-t7W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
