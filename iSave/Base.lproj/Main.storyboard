@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Main-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="iSave" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,49 +21,71 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="How much did you spend now?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="Yhc-bE-6l1"/>
+                                    <constraint firstAttribute="width" constant="343" id="ZZA-JO-uQn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="PLL-hr-OZ4">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="124" id="Ftf-wM-qU1"/>
-                                    <constraint firstAttribute="height" constant="40" id="pEN-zT-wwk"/>
+                                    <constraint firstAttribute="width" constant="124" id="1hd-pK-qMS"/>
+                                    <constraint firstAttribute="height" constant="40" id="wJe-Ow-Fjm"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.80827526832880014" blue="0.6031687336614906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.12349609375000004" green="0.099812768813023173" blue="0.074557273623758399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="go"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXr-If-Dw9">
+                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="C4a-ss-YrY"/>
                                 </constraints>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="Add to expenses">
-                                    <color key="titleShadowColor" red="1" green="0.77967625131484963" blue="0.75147047430414937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of expense:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-Ku-tlq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="I0a-T5-DdY"/>
+                                    <constraint firstAttribute="height" constant="68" id="vkJ-0G-Vu3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-u5-7h8"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="xXr-If-Dw9" secondAttribute="trailing" constant="72" id="0HB-As-1Pq"/>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstItem="JAt-u5-7h8" firstAttribute="top" secondItem="PLL-hr-OZ4" secondAttribute="bottom" constant="70" id="FL7-e9-1W3"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="KE5-Qt-8fR"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xXr-If-Dw9" secondAttribute="bottom" constant="85" id="LhH-Qq-LSY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JAt-u5-7h8" secondAttribute="trailing" constant="41" id="Lvu-gP-bu6"/>
                             <constraint firstItem="xXr-If-Dw9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="71" id="TXB-Lw-kRy"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Usc-uD-ftz"/>
-                            <constraint firstItem="xXr-If-Dw9" firstAttribute="top" secondItem="PLL-hr-OZ4" secondAttribute="bottom" constant="86" id="XWZ-TA-8uU"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="dpT-oW-hAr"/>
-                            <constraint firstItem="PLL-hr-OZ4" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="dxO-tX-FrD"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xXr-If-Dw9" secondAttribute="bottom" constant="150" id="eb0-xZ-7Dz"/>
-                            <constraint firstItem="PLL-hr-OZ4" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="ytx-bj-eW8"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="328" id="zMO-VE-3hJ"/>
+                            <constraint firstItem="JAt-u5-7h8" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="40" id="UaZ-ur-DQC"/>
+                            <constraint firstItem="scM-Ku-tlq" firstAttribute="top" secondItem="PLL-hr-OZ4" secondAttribute="bottom" constant="23" id="YsB-ZH-bBp"/>
+                            <constraint firstItem="PLL-hr-OZ4" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" id="Zui-CL-iP9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PLL-hr-OZ4" secondAttribute="trailing" constant="110" id="aOa-7q-hAn"/>
+                            <constraint firstItem="PLL-hr-OZ4" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="109" id="cM9-J2-VOe"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="f1A-A4-GiY"/>
+                            <constraint firstItem="scM-Ku-tlq" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="58" id="jjo-LD-Vrp"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="oHI-3p-5Gg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="scM-Ku-tlq" secondAttribute="trailing" constant="59" id="oRg-bf-c9Y"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Main" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
+        <!--Expenses-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="iSave" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,7 +117,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Expenses" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
