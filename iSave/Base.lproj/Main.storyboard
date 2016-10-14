@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="How much did you spend now?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.79841653146955005" green="0.70133215037847707" blue="0.89532696759259256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="Yhc-bE-6l1"/>
                                     <constraint firstAttribute="width" constant="343" id="ZZA-JO-uQn"/>
@@ -28,15 +28,17 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.9118037223815918" green="0.9118037223815918" blue="0.9118037223815918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="PLL-hr-OZ4">
+                                <color key="backgroundColor" red="0.49645908001609435" green="0.40726239522744856" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="1hd-pK-qMS"/>
                                     <constraint firstAttribute="height" constant="40" id="wJe-Ow-Fjm"/>
                                 </constraints>
                                 <color key="textColor" red="0.12349609375000004" green="0.099812768813023173" blue="0.074557273623758399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXr-If-Dw9">
                                 <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
@@ -68,7 +70,7 @@
                                 </connections>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.79841653150000003" green="0.70133215039999997" blue="0.89532696759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="xXr-If-Dw9" secondAttribute="trailing" constant="72" id="0HB-As-1Pq"/>
                             <constraint firstItem="JAt-u5-7h8" firstAttribute="top" secondItem="PLL-hr-OZ4" secondAttribute="bottom" constant="70" id="FL7-e9-1W3"/>
@@ -109,31 +111,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zr7-KX-zzm">
+                                <color key="backgroundColor" red="0.79841653150000003" green="0.70133215039999997" blue="0.89532696759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="557" id="MQX-TQ-nVC"/>
+                                </constraints>
+                                <color key="separatorColor" red="0.49645908" green="0.40726239520000002" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexColor" red="0.1234960938" green="0.099812768809999994" blue="0.074557273620000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.79841653150000003" green="0.70133215039999997" blue="0.89532696759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.49645908" green="0.40726239520000002" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Expenses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86E-OD-mh0">
+                                <color key="backgroundColor" red="0.79841653150000003" green="0.70133215039999997" blue="0.89532696759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="N0A-Eb-ynk"/>
+                                    <constraint firstAttribute="height" constant="61" id="cyH-qb-CWk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.79841653150000003" green="0.70133215039999997" blue="0.89532696759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="86E-OD-mh0" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" constant="5" id="00c-gy-zgD"/>
+                            <constraint firstItem="Zr7-KX-zzm" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="9US-OJ-9sc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="86E-OD-mh0" secondAttribute="trailing" constant="60" id="JK3-8d-vgS"/>
+                            <constraint firstItem="86E-OD-mh0" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="60" id="Rfj-Zs-iOh"/>
+                            <constraint firstAttribute="trailing" secondItem="Zr7-KX-zzm" secondAttribute="trailing" id="Y33-Mr-hYn"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Zr7-KX-zzm" secondAttribute="bottom" id="xS5-aO-Kv0"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Zr7-KX-zzm" secondAttribute="bottom" id="xZu-Zx-uqL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Expenses" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="expensesTable" destination="Zr7-KX-zzm" id="t9j-gn-oR7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1477.5" y="102.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

@@ -9,28 +9,28 @@
 import UIKit
 import Firebase
 
-class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var spentMoney: UITextField!
     
     @IBOutlet weak var expenseType: UIPickerView!
     
     //initializing the picker data (the wheel button)
-    var pickerDataSource = ["Benzin", "Every Day", "Payments", "Others"];
-    var selectedExpenseValue:String = "others"
+    var pickerDataSource = ["Others", "Benzin", "Groceries", "Bills", "Entertainments"];
+    var selectedExpenseValue:String = "Others"
 
 
     @IBAction func addToExpenses(_ sender: AnyObject) {
         let rootRef = FIRDatabase.database().reference()
         //testing that the database works:
-        let childRef = FIRDatabase.database().reference(withPath: "grocery-items")
-        let itemsRef = rootRef.child("grocery-items")
-        let milkRef = itemsRef.child("milk")
-        let expensesRef = rootRef.child("expenses")
-        print(rootRef.key)   // prints: ""
-        print(childRef.key)  // prints: "grocery-items"
-        print(itemsRef.key)  // prints: "grocery-items"
-        print(milkRef.key)   // prints: "milk"
+//        let childRef = FIRDatabase.database().reference(withPath: "grocery-items")
+//        let itemsRef = rootRef.child("grocery-items")
+//        let milkRef = itemsRef.child("milk")
+//        let expensesRef = rootRef.child("expenses")
+//        print(rootRef.key)   // prints: ""
+//        print(childRef.key)  // prints: "grocery-items"
+//        print(itemsRef.key)  // prints: "grocery-items"
+//        print(milkRef.key)   // prints: "milk"
         
         //saving data to firebase database:
         //get the text field value.
@@ -56,8 +56,6 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
         currentExpensesNode.setValue(moneySpentValue)
 
-
-        
     }
 
     override func viewDidLoad() {
@@ -65,6 +63,10 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // Do any additional setup after loading the view, typically from a nib.
         self.expenseType.dataSource = self;
         self.expenseType.delegate = self;
+        //added spentMoney to delegate so that i can use the textFieldShouldReturn function
+        //this function is used to remove the keyboard if i press enter.
+        self.spentMoney.delegate = self;
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +77,11 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     //implemented methods from the UIPickerViewDataSource protocol:
