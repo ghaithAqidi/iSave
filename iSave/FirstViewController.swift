@@ -17,6 +17,7 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     //initializing the picker data (the wheel button)
     var pickerDataSource = ["Benzin", "Every Day", "Payments", "Others"];
+    var selectedExpenseValue:String = "others"
 
 
     @IBAction func addToExpenses(_ sender: AnyObject) {
@@ -45,10 +46,17 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let dateString = date.description.substring(to: index)
 
         
-        //add a new child node to firebase database (must be unwrapped by !):
-        let currentExpensesNode = expensesRef.child(dateString)
+        //add a new child node to firebase database root with name from the wheel:
+        let selectedExpenseValueRef = rootRef.child(selectedExpenseValue)
+        //add a new child to the selectedExpenseValueRef with current time as name
+        let currentExpensesNode = selectedExpenseValueRef.child(dateString)
+        
+        //let expense = currentExpensesNode.child(selectedExpenseValue)
         //add the value to the node:
+
         currentExpensesNode.setValue(moneySpentValue)
+
+
         
     }
 
@@ -88,18 +96,20 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         if(row == 0)
         {
             self.view.backgroundColor = UIColor.white;
+            //extract the current selected Value.
+            selectedExpenseValue = pickerDataSource[pickerView.selectedRow(inComponent: 0)]
         }
         else if(row == 1)
         {
-            self.view.backgroundColor = UIColor.red;
+            selectedExpenseValue = pickerDataSource[pickerView.selectedRow(inComponent: 0)]
         }
         else if(row == 2)
         {
-            self.view.backgroundColor =  UIColor.green;
+            selectedExpenseValue = pickerDataSource[pickerView.selectedRow(inComponent: 0)]
         }
         else
         {
-            self.view.backgroundColor = UIColor.blue;
+            selectedExpenseValue = pickerDataSource[pickerView.selectedRow(inComponent: 0)]
         }
     }
 
